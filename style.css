@@ -1,0 +1,1058 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #2d3142; /* Dark Blue-Gray */
+  background-color: #ffffff; /* White */
+}
+
+#home {
+  padding: 0;
+  text-align: center;
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.home-section {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.home-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  transition: transform 1s ease-in-out; /* Smooth transition for slider */
+}
+
+.slider-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6); /* Dim the background to ensure text is readable */
+}
+
+/* Logo Container */
+.logo-container {
+  position: absolute;
+  top: 250px;
+  left: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2; /* Logo will be above other content */
+  max-width: 15%; /* Restricting width to 15% */
+  padding: 5px;
+  gap: 10px;
+}
+
+.slider-logo {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Increased max-width to 300px */
+  filter: brightness(10);
+}
+
+.studio-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 40px; /* Prominent size for title */
+  font-weight: bold; /* Keeps everything bold */
+  text-shadow: 3px 3px 7px rgba(0, 0, 0, 0.7); 
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Professional uppercase look */
+  display: inline-block;
+}
+
+.studio-title .studio {
+  color: #ED9121; /* Richer orange tint for STUDIO */
+}
+
+.studio-title .six-interiors {
+  color: #d35400; /* Reddish tint of orange for 6 INTERIORS */
+}
+
+.studio-title span {
+  display: inline; /* Ensures precise spacing control */
+}
+
+/* Overlay Text Styling */
+.text-overlay {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  max-width: 80%;
+  line-height: 1.5;
+  z-index: 3; /* Ensure text stays above slider image */
+  position: absolute;
+  bottom: 40px; /* Position the text slightly above the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center the text horizontally */
+  padding: 0 15px;
+}
+
+/* Slider Buttons */
+.slider-buttons {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 3;
+}
+
+.slider-button {
+  background: none;
+  border: 2px solid #ffffff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.1s ease, background-color 0.1s ease;
+}
+
+.slider-button.active {
+  background-color: #ffffff;
+  opacity: 1;
+}
+
+.slider-button:hover {
+  opacity: 1;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .studio-title {
+    font-size: 18px; /* Smaller title for mobile */
+  }
+
+  .text-overlay {
+    font-size: 18px; /* Smaller text for mobile */
+  }
+
+  .slider-logo {
+    width: 100px; /* Even smaller logo for mobile */
+  }
+}
+
+
+/* Learn More Section */
+#learn-more {
+  padding: 50px 20px;
+  background-color: #4f5d75; /* Slate Blue */
+  color: #ffffff; /* White */
+  text-align: center;
+}
+
+#learn-more .learn-more-content {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Section 2: Professional Home Interiors Workflow */
+#professional-home-interiors {
+  padding: 80px 20px;
+  background-color: #f4f3ee; /* Light Beige */
+  text-align: center;
+}
+
+#professional-home-interiors .section-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#professional-home-interiors h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ef8354; /* Burnt Orange */
+}
+
+#professional-home-interiors .workflow {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+#professional-home-interiors .workflow-item {
+  width: 22%;
+  background-color: #ffffff; /* White */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#professional-home-interiors .workflow-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+#professional-home-interiors .workflow-item .circle {
+  background-color: #ef8354; /* Burnt Orange */
+  color: #ffffff; /* White */
+  font-size: 2rem;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px auto;
+}
+
+#professional-home-interiors .workflow-item .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #2d3142; /* Dark Blue-Gray */
+}
+
+#professional-home-interiors .workflow-item .description {
+  font-size: 1rem;
+  color: #4f5d75; /* Slate Blue */
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  #professional-home-interiors .workflow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #professional-home-interiors .workflow-item {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  #professional-home-interiors h2 {
+    font-size: 2rem;
+  }
+
+  #professional-home-interiors .workflow-item .description {
+    font-size: 1rem;
+  }
+}
+
+/* Section 3: Our Designs */
+#our-designs {
+   background-color: #dad2bc; /* Light Gray */
+  padding: 40px 20px;
+  text-align: center;
+}
+
+#our-designs .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#our-designs h2 {
+  font-size: 2.5rem;
+  color: #2d3142; /* Dark Blue-Gray */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#our-designs .section-description {
+  font-size: 1.2rem;
+  color: #4f5d75; /* Slate Blue */
+  margin-bottom: 40px;
+}
+
+#our-designs .design-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+#our-designs .design-column {
+  width: 30%;
+  background-color: #f4f3ee; /* Light Beige */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#our-designs .design-column h3 {
+  font-size: 1.5rem;
+  color: #ef8354; /* Burnt Orange */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+#our-designs .design-column p {
+  font-size: 1rem;
+  color: #4f5d75; /* Slate Blue */
+  margin-bottom: 20px;
+}
+
+#our-designs .image-slider {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+#our-designs .image-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: slide 7s infinite linear;
+}
+
+#our-designs .image-slider img:nth-child(1) {
+  animation-delay: 0s;
+}
+
+#our-designs .image-slider img:nth-child(2) {
+  animation-delay: 3.5s;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 1;
+    transform: translateX(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-100%);
+  }
+}
+
+@media (max-width: 768px) {
+  #our-designs .design-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #our-designs .design-column {
+    width: 80%;
+    margin-bottom: 40px;
+  }
+
+  #our-designs h2 {
+    font-size: 2rem;
+  }
+
+  #our-designs .section-description {
+    font-size: 1rem;
+  }
+
+  #our-designs .design-column p {
+    font-size: 1rem;
+  }
+}
+
+/* Price Details Styling with Further Reduced Bottom Padding */
+.price-details {
+  margin-top: 15px;
+  text-align: center;
+  background-color: #bfc0c0; /* Light Gray for neutral styling */
+  border-radius: 10px;
+  padding: 6px 8px 0px; /* Further reduced bottom padding */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.price-details.pop:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.price-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #4f5d75; /* Slate Blue */
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.price-amount {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #ef8354; /* Burnt Orange */
+  margin: 4px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px; /* Reduced gap */
+}
+
+.price-original {
+  text-decoration: line-through;
+  font-size: 1rem;
+  color: #2d3142; /* Dark Blue-Gray */
+}
+
+.price-current {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ef8354; /* Burnt Orange */
+}
+
+.price-note {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #ffffff; /* White for subtle contrast */
+  margin-top: 4px;
+  margin-bottom: 0; /* Removed extra space at the bottom */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+  .price-details {
+    padding: 5px 6px 0px; /* Further reduced bottom padding for smaller screens */
+  }
+
+  .price-title {
+    font-size: 1rem;
+  }
+
+  .price-amount {
+    font-size: 1.1rem;
+  }
+
+  .price-original {
+    font-size: 0.9rem;
+  }
+
+  .price-current {
+    font-size: 1.5rem;
+  }
+}
+/* Section 4: What We Do */
+#what-we-do {
+  padding: 80px 20px;
+  background-color: #3e4a61; /* Lighter Dark Blue-Gray for background */
+  color: #ffffff; /* White text for better visibility */
+  text-align: center;
+}
+
+#what-we-do .section-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#what-we-do h2 {
+  font-size: 2.5rem;
+  color: #ffffff; /* Crisp white text for the title */
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#what-we-do .section-description {
+  font-size: 1.2rem;
+  color: #ffffff; /* Crisp white description for clarity */
+  margin-bottom: 40px;
+}
+
+#what-we-do .service-tiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 250px 300px;
+  gap: 15px; /* Reduced gap between tiles */
+}
+
+#what-we-do .service-tile {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#what-we-do .service-tile.wide-tile {
+  grid-column: 1 / 3; /* Living tile spans two columns */
+  grid-row: 1 / 3; /* Spanning both rows */
+}
+
+#what-we-do .service-tile:nth-child(1) {
+  grid-column: 1 / 2; /* Kitchen in the 1st column */
+  grid-row: 1 / 2; /* First row */
+  background-image: url('https://i.ibb.co/1L9RtQq/IMG-7692.jpg');
+}
+
+#what-we-do .service-tile:nth-child(2) {
+  grid-column: 2 / 3; /* Living in the 2nd column */
+  grid-row: 1 / 2; /* First row */
+  background-image: url('https://i.ibb.co/hy78C64/IMG-7622.jpg');
+}
+
+#what-we-do .service-tile:nth-child(3) {
+  grid-column: 3 / 4; /* Pooja in the 3rd column */
+  grid-row: 1 / 2; /* First row */
+  background-image: url('https://i.ibb.co/0B3BhvJ/IMG-7747.jpg');
+}
+
+#what-we-do .service-tile:nth-child(4) {
+  grid-column: 1 / 2; /* Bedroom in the 1st column */
+  grid-row: 2 / 3; /* Second row */
+  background-image: url('https://i.ibb.co/Lr4vTQT/IMG-7736.jpg');
+}
+
+#what-we-do .service-tile:nth-child(5) {
+  grid-column: 2 / 4; /* Dining in the second row spanning two columns */
+  grid-row: 2 / 3; /* Second row */
+  background-image: url('https://i.ibb.co/brJVCmj/IMG-7637.jpg');
+}
+
+#what-we-do .service-tile h3 {
+  font-size: 2.5rem; /* Increase font size */
+  text-transform: uppercase; /* Make header all capital letters */
+  text-align: center; /* Center align the title */
+  color: #ffffff; /* White color for header */
+  font-weight: 600;
+  position: absolute;
+  top: 50%; /* Center the title vertically */
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center it both horizontally and vertically */
+  z-index: 2; /* Make sure text stays on top */
+}
+#what-we-do .service-tile p {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2rem;
+  color: #ffffff; /* Crisp white text color for description */
+  opacity: 0; /* Hidden by default */
+  z-index: 2;
+  transition: opacity 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for better readability */
+}
+
+#what-we-do .service-tile::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Lighter tint on tiles */
+  z-index: 1;
+}
+
+#what-we-do .service-tile:hover {
+  opacity: 1; /* Show tile on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+  background-color: rgba(0, 0, 0, 0.8); /* Darker tint on hover */
+}
+#what-we-do .service-tile:hover::after {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker tint on hover */
+}
+
+#what-we-do .service-tile:hover p {
+  opacity: 1; /* Show description on hover */
+  color: #ffffff; /* Change description text color to crisp white on hover */
+  transform: translateX(-50%) translateY(5px); /* Move description slightly for added effect */
+}
+
+@media (max-width: 768px) {
+  #what-we-do .service-tiles {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 250px);
+  }
+
+  #what-we-do .service-tile.wide-tile {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  #what-we-do h2 {
+    font-size: 2rem;
+  }
+
+  #what-we-do .section-description {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #what-we-do .service-tiles {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 250px);
+  }
+
+  #what-we-do .service-tile.wide-tile {
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
+/* Section 5: Workflow */
+#workflow {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.workflow-title {
+  font-size: 28px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+.workflow-title .highlight {
+  color: #9d8189; /* Light Purple for Highlight */
+}
+
+.workflow-steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px; /* Reduced gap between icons and arrows */
+}
+
+.workflow-step {
+  text-align: center;
+  max-width: 180px; /* Increased width for better spacing */
+}
+
+.icon-wrapper {
+  width: 150px; /* Increased size for the wrapper */
+  height: 150px; /* Increased size for the wrapper */
+  border-radius: 50%; /* Circular shape */
+  padding: 15px; /* Padding around the image */
+  background-color: #9d8189; /* Light background for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  animation: fillBackground 2s linear infinite;
+}
+
+.icon-wrapper img {
+  width: 90%; /* Icon image size relative to wrapper */
+  height: auto;
+  object-fit: contain; /* Ensure the image fits well */
+  border-radius: 50%; /* Match the wrapper's shape */
+}
+
+.step-text {
+  font-size: 18px; /* Increased font size for step text */
+  font-weight: bold; /* Make the text bold for visibility */
+  color: #333;
+  line-height: 1.4;
+}
+
+.arrow {
+  font-size: 40px; /* Increased arrow size */
+  color: #6b4e71; /* Purple for Arrows */
+  margin: 0 5px; /* Reduced margin to make arrows closer to icons */
+}
+
+@media screen and (max-width: 768px) {
+  .workflow-steps {
+    flex-direction: column;
+  }
+
+  .arrow {
+    display: none; /* Remove arrows for smaller screens */
+  }
+
+  .icon-wrapper {
+    width: 120px; /* Adjusted for smaller screens */
+    height: 120px;
+  }
+
+  .step-text {
+    font-size: 16px; /* Adjusted font size for smaller screens */
+  }
+}
+
+/* Workflow Section Styling */
+.workflow-section {
+  text-align: center;
+  padding: 40px;
+}
+
+.workflow-section .workflow-steps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 5px; /* Reduced gap between icons and arrows */
+}
+
+.workflow-section .step {
+  flex: 1;
+  text-align: center;
+}
+
+.workflow-section .icon-wrapper {
+  position: relative;
+  width: 120px; /* Increased icon size */
+  height: 120px; /* Increased icon size */
+  margin: 0 auto 15px;
+  background-color: #9d8189; /* Purple Background */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #bfc0c0; /* Light gray border matches theme */
+  transition: background-color 1s ease-in-out; /* Ensure smooth transition*/
+}
+
+.workflow-section .icon {
+  font-size: 45px; /* Increased icon size */
+  color: #bfc0c0; /* Default icon color (light gray) */
+  transition: color 0.5s ease;
+}
+
+/* Background Fill Animation for Icon Wrappers */
+@keyframes fillBackground {
+   0% {
+    background-color: #ef8354; /* Initial background color */
+    transform: scale(1); /* Start normal size */
+  }
+  50% {
+    background-color: #4f5d75; /* Fill color */
+    transform: scale(1.2); /* Slight scale-up for effect */
+  }
+  100% {
+    background-color: #ef8354; /* Back to original color */
+    transform: scale(1); /* Return to normal size */
+  }
+}
+
+/* Apply animation to icons with delay for each */
+.workflow-section .step:nth-child(1) .icon-wrapper {
+  animation: fillBackground 1.5s ease-in-out infinite;
+  animation-delay: 0s;
+}
+
+.workflow-section .step:nth-child(2) .icon-wrapper {
+  animation: fillBackground 1.5s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.workflow-section .step:nth-child(3) .icon-wrapper {
+  animation: fillBackground 1.5s ease-in-out infinite;
+  animation-delay: 3s;
+}
+
+.workflow-section .step:nth-child(4) .icon-wrapper {
+  animation: fillBackground 1.5s ease-in-out infinite;
+  animation-delay: 4.5s;
+}
+
+.workflow-section .step:nth-child(5) .icon-wrapper {
+  animation: fillBackground 1.5s ease-in-out infinite;
+  animation-delay: 6s;
+}
+
+/* Testimonials Section */
+.testimonials-section {
+  padding: 40px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.reviews-slider {
+  position: relative;
+  overflow: hidden;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.reviews-container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.review-slide {
+  flex: 1;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+}
+
+.review-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  max-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.submit-review-section {
+  margin-top: 40px;
+}
+
+.submit-review-section form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.submit-review-section input,
+.submit-review-section textarea {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.submit-review-section button {
+  padding: 10px 20px;
+  background-color: #ef8354;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-review-section button:hover {
+  background-color: #d96b3d;
+}
+
+.testimonial-buttons {
+  position: absolute;
+  top: 90%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  z-index: 3;
+}
+
+.testimonial-button {
+  background: none;
+  border: 2px solid #333;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.testimonial-button:hover {
+  opacity: 1;
+}
+
+.testimonial-button.active {
+  background-color: #ffffff;
+}
+
+/* Contacts Section */
+#contact-us {
+  padding: 50px 20px;
+  background-color: #dedbd2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.contact-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.contact-details {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-details h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact-details p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.maps-link {
+  display: inline-block;
+  margin-top: 15px;
+  font-size: 16px;
+  color: #ef8354;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.maps-link:hover {
+  text-decoration: underline;
+}
+
+.contact-map {
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 8px;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Shortcut Buttons */
+.shortcuts {
+  position: fixed; /* Keep buttons fixed on all slides */
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 10; /* Ensure they stay on top */
+}
+
+.shortcut-button {
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.5); /* Darker tint */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.shortcut-button:hover {
+  background: rgba(0, 0, 0, 0.7);
+  transform: scale(1.05);
+  color: #ef8354; /* Burnt orange on hover */
+}
+
+.shortcut-button:active {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Maintain responsive layout for smaller screens */
+@media screen and (max-width: 768px) {
+  .shortcuts {
+    gap: 10px;
+    top: 10px;
+  }
+
+  .shortcut-button {
+    font-size: 12px;
+    padding: 8px 15px;
+  }
+}
+
+/* Instagram Logo Styling */
+.instagram-link {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.instagram-logo {
+  width: 50px; /* Adjust the size as needed */
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.instagram-logo:hover {
+  transform: scale(1.5); /* Slight zoom effect when hovering */
+}
+
+/* Fixed Buttons Styling */
+.fixed-buttons {
+  position: fixed;
+  right: 20px; /* Position slightly away from the right edge */
+  top: 50%; /* Center vertically on the page */
+  transform: translateY(-50%); /* Adjust for exact vertical center */
+  z-index: 1000; /* Ensure the buttons appear above other elements */
+  text-align: center;
+}
+
+.fixed-buttons a {
+  display: block;
+  margin-bottom: 15px;
+  margin: 0; /* Remove margin between buttons */
+  width: 60px; /* Set width of buttons */
+  height: 60px; /* Set height of buttons */
+  background-color: rgba(0, 0, 0, 0.5); /* Slightly darker background than home section */
+  border-radius: 8px; /* Square background with rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Button shadow */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-buttons a:hover {
+  transform: scale(1.1); /* Slightly enlarge button on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.button-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Ensure image stays within the button */
+}
+
+/* Additional Hover Text Styling */
+.fixed-buttons a[title]:hover::after {
+  content: attr(title);
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 14px;
+  white-space: nowrap;
+  z-index: 1000;
+}
